@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
+from jh_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
 
 class TestUsersNameTokensPostRequest(unittest.TestCase):
     """UsersNameTokensPostRequest unit test stubs"""

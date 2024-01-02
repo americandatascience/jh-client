@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.service import Service
+from jh_client.models.service import Service
 
 class TestService(unittest.TestCase):
     """Service unit test stubs"""
@@ -47,7 +47,7 @@ class TestService(unittest.TestCase):
                 command = [
                     ''
                     ],
-                info = openapi_client.models.info.info()
+                info = jh_client.models.info.info()
             )
         else:
             return Service(

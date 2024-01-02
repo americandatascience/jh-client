@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.users_name_patch_request import UsersNamePatchRequest
+from jh_client.models.users_name_patch_request import UsersNamePatchRequest
 
 class TestUsersNamePatchRequest(unittest.TestCase):
     """UsersNamePatchRequest unit test stubs"""

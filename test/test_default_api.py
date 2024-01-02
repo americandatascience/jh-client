@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.default_api import DefaultApi
+from jh_client.api.default_api import DefaultApi
 
 
 class TestDefaultApi(unittest.TestCase):

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.get200_response import Get200Response
+from jh_client.models.get200_response import Get200Response
 
 class TestGet200Response(unittest.TestCase):
     """Get200Response unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
+from jh_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
 
 class TestOauth2TokenPost200Response(unittest.TestCase):
     """Oauth2TokenPost200Response unit test stubs"""

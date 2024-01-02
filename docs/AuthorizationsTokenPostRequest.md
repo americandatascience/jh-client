@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
+from jh_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
 
 # TODO update the JSON string below
 json = "{}"

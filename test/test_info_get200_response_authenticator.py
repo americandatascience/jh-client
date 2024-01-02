@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.info_get200_response_authenticator import InfoGet200ResponseAuthenticator
+from jh_client.models.info_get200_response_authenticator import InfoGet200ResponseAuthenticator
 
 class TestInfoGet200ResponseAuthenticator(unittest.TestCase):
     """InfoGet200ResponseAuthenticator unit test stubs"""

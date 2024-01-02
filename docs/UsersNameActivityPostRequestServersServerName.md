@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.users_name_activity_post_request_servers_server_name import UsersNameActivityPostRequestServersServerName
+from jh_client.models.users_name_activity_post_request_servers_server_name import UsersNameActivityPostRequestServersServerName
 
 # TODO update the JSON string below
 json = "{}"

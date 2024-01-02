@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
+from jh_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
 
 # TODO update the JSON string below
 json = "{}"

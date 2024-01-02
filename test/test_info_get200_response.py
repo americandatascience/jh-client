@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.info_get200_response import InfoGet200Response
+from jh_client.models.info_get200_response import InfoGet200Response
 
 class TestInfoGet200Response(unittest.TestCase):
     """InfoGet200Response unit test stubs"""
@@ -39,10 +39,10 @@ class TestInfoGet200Response(unittest.TestCase):
                 version = '',
                 python = '',
                 sys_executable = '',
-                authenticator = openapi_client.models._info_get_200_response_authenticator._info_get_200_response_authenticator(
+                authenticator = jh_client.models._info_get_200_response_authenticator._info_get_200_response_authenticator(
                     class = '', 
                     version = '', ),
-                spawner = openapi_client.models._info_get_200_response_spawner._info_get_200_response_spawner(
+                spawner = jh_client.models._info_get_200_response_spawner._info_get_200_response_spawner(
                     class = '', 
                     version = '', )
             )

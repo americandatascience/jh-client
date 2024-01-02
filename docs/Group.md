@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.group import Group
+from jh_client.models.group import Group
 
 # TODO update the JSON string below
 json = "{}"

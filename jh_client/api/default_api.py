@@ -29,27 +29,27 @@ from pydantic import StrictBool, StrictFloat, StrictInt, StrictStr, field_valida
 
 from typing import Any, Dict, List, Optional, Union
 
-from openapi_client.models.authorizations_token_post200_response import AuthorizationsTokenPost200Response
-from openapi_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
-from openapi_client.models.get200_response import Get200Response
-from openapi_client.models.group import Group
-from openapi_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
-from openapi_client.models.info_get200_response import InfoGet200Response
-from openapi_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
-from openapi_client.models.proxy_patch_request import ProxyPatchRequest
-from openapi_client.models.request_identity import RequestIdentity
-from openapi_client.models.service import Service
-from openapi_client.models.shutdown_post_request import ShutdownPostRequest
-from openapi_client.models.token import Token
-from openapi_client.models.user import User
-from openapi_client.models.users_name_activity_post_request import UsersNameActivityPostRequest
-from openapi_client.models.users_name_patch_request import UsersNamePatchRequest
-from openapi_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
-from openapi_client.models.users_post_request import UsersPostRequest
+from jh_client.models.authorizations_token_post200_response import AuthorizationsTokenPost200Response
+from jh_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
+from jh_client.models.get200_response import Get200Response
+from jh_client.models.group import Group
+from jh_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
+from jh_client.models.info_get200_response import InfoGet200Response
+from jh_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
+from jh_client.models.proxy_patch_request import ProxyPatchRequest
+from jh_client.models.request_identity import RequestIdentity
+from jh_client.models.service import Service
+from jh_client.models.shutdown_post_request import ShutdownPostRequest
+from jh_client.models.token import Token
+from jh_client.models.user import User
+from jh_client.models.users_name_activity_post_request import UsersNameActivityPostRequest
+from jh_client.models.users_name_patch_request import UsersNamePatchRequest
+from jh_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
+from jh_client.models.users_post_request import UsersPostRequest
 
-from openapi_client.api_client import ApiClient
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from jh_client.api_client import ApiClient
+from jh_client.api_response import ApiResponse
+from jh_client.rest import RESTResponseType
 
 
 class DefaultApi:

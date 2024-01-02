@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# jh_client.DefaultApi
 
 All URIs are relative to */hub/api*
 
@@ -57,14 +57,14 @@ Used by single-user notebook servers to hand off cookie authentication to the Hu
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -82,9 +82,9 @@ configuration.api_key['token'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     cookie_name = 'cookie_name_example' # str | 
     cookie_value = 'cookie_value_example' # str | 
 
@@ -143,15 +143,15 @@ Request a new API token to use with the JupyterHub REST API. If not already auth
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.authorizations_token_post200_response import AuthorizationsTokenPost200Response
-from openapi_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.authorizations_token_post200_response import AuthorizationsTokenPost200Response
+from jh_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -163,10 +163,10 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    credentials = openapi_client.AuthorizationsTokenPostRequest() # AuthorizationsTokenPostRequest |  (optional)
+    api_instance = jh_client.DefaultApi(api_client)
+    credentials = jh_client.AuthorizationsTokenPostRequest() # AuthorizationsTokenPostRequest |  (optional)
 
     try:
         # Request a new API token
@@ -220,13 +220,13 @@ Identify a user or service from an API token
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -238,9 +238,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     token = 'token_example' # str | 
 
     try:
@@ -293,14 +293,14 @@ List groups
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.group import Group
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.group import Group
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -312,9 +312,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     offset = 3.4 # float | Return a number of groups starting at the specified offset. Can be used with limit to paginate. If unspecified, return all groups.  (optional)
     limit = 3.4 # float | Return a finite number of groups. Can be used with offset to paginate. If unspecified, use api_page_default_limit.  (optional)
 
@@ -370,13 +370,13 @@ Delete a group
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -388,9 +388,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
 
     try:
@@ -442,14 +442,14 @@ Get a group by name
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.group import Group
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.group import Group
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -461,9 +461,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
 
     try:
@@ -517,14 +517,14 @@ Create a group
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.group import Group
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.group import Group
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -536,9 +536,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
 
     try:
@@ -592,14 +592,14 @@ Set the group properties.  Added in JupyterHub 3.2.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.group import Group
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.group import Group
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -611,9 +611,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
     body = None # object | The new group properties, as a JSON dict.
 
@@ -671,13 +671,13 @@ Body should be a JSON dictionary where `users` is a list of usernames to remove 
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -689,9 +689,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
 
     try:
@@ -743,15 +743,15 @@ Add users to a group
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.group import Group
-from openapi_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.group import Group
+from jh_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -763,11 +763,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | group name
-    body = openapi_client.GroupsNameUsersPostRequest() # GroupsNameUsersPostRequest | The users to add to the group
+    body = jh_client.GroupsNameUsersPostRequest() # GroupsNameUsersPostRequest | The users to add to the group
 
     try:
         # Add users to a group
@@ -823,14 +823,14 @@ Detailed JupyterHub information, including Python version, JupyterHub's version 
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.info_get200_response import InfoGet200Response
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.info_get200_response import InfoGet200Response
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -842,9 +842,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
 
     try:
         # Get detailed info about JupyterHub
@@ -897,13 +897,13 @@ Redirect users to this URL to begin the OAuth process. It is not an API endpoint
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -921,9 +921,9 @@ configuration.api_key['token'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     client_id = 'client_id_example' # str | The client id
     response_type = 'response_type_example' # str | The response type (always 'code')
     redirect_uri = 'redirect_uri_example' # str | The redirect url
@@ -985,14 +985,14 @@ Request an OAuth2 token from an authorization code. This request completes the O
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1010,9 +1010,9 @@ configuration.api_key['token'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     client_id = 'client_id_example' # str | The client id
     client_secret = 'client_secret_example' # str | The client secret
     grant_type = 'grant_type_example' # str | The grant type (always 'authorization_code')
@@ -1076,13 +1076,13 @@ A convenience alias for getting the routing table directly from the proxy
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1094,9 +1094,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     offset = 3.4 # float | Return a number of routes starting at the given offset. Can be used with limit to paginate. If unspecified, return all routes.  (optional)
     limit = 3.4 # float | Return a finite number of routes. Can be used with offset to paginate. If unspecified, use api_page_default_limit  (optional)
 
@@ -1154,14 +1154,14 @@ Notifies the Hub of a new proxy to use.
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.proxy_patch_request import ProxyPatchRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.proxy_patch_request import ProxyPatchRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1173,10 +1173,10 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    body = openapi_client.ProxyPatchRequest() # ProxyPatchRequest | Any values that have changed for the new proxy. All keys are optional.
+    api_instance = jh_client.DefaultApi(api_client)
+    body = jh_client.ProxyPatchRequest() # ProxyPatchRequest | Any values that have changed for the new proxy. All keys are optional.
 
     try:
         # Notify the Hub about a new proxy
@@ -1227,13 +1227,13 @@ Force the Hub to sync with the proxy
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1245,9 +1245,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
 
     try:
         # Force the Hub to sync with the proxy
@@ -1298,14 +1298,14 @@ This endpoint is not authenticated for the purpose of clients and user to identi
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.get200_response import Get200Response
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.get200_response import Get200Response
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1323,9 +1323,9 @@ configuration.api_key['token'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['token'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
 
     try:
         # Get JupyterHub version
@@ -1375,14 +1375,14 @@ List services
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.service import Service
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.service import Service
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1394,9 +1394,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
 
     try:
         # List services
@@ -1446,14 +1446,14 @@ Get a service by name
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.service import Service
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.service import Service
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1465,9 +1465,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | service name
 
     try:
@@ -1521,14 +1521,14 @@ Shutdown the Hub
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.shutdown_post_request import ShutdownPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.shutdown_post_request import ShutdownPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1540,10 +1540,10 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    body = openapi_client.ShutdownPostRequest() # ShutdownPostRequest |  (optional)
+    api_instance = jh_client.DefaultApi(api_client)
+    body = jh_client.ShutdownPostRequest() # ShutdownPostRequest |  (optional)
 
     try:
         # Shutdown the Hub
@@ -1595,14 +1595,14 @@ Return authenticated user's model
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.request_identity import RequestIdentity
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.request_identity import RequestIdentity
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1614,9 +1614,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
 
     try:
         # Return authenticated user's model
@@ -1666,14 +1666,14 @@ List users
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1685,9 +1685,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     state = 'state_example' # str | Return only users who have servers in the given state. If unspecified, return all users.  active: all users with any active servers (ready OR pending) ready: all users who have any ready servers (running, not pending) inactive: all users who have *no* active servers (complement of active)  Added in JupyterHub 1.3  (optional)
     offset = 3.4 # float | Return a number users starting at the given offset. Can be used with limit to paginate. If unspecified, return all users.  (optional)
     limit = 3.4 # float | Return a finite number of users. Can be used with offset to paginate. If unspecified, use api_page_default_limit.  (optional)
@@ -1749,14 +1749,14 @@ Notify the Hub of activity by the user, e.g. accessing a service or (more likely
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.users_name_activity_post_request import UsersNameActivityPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.users_name_activity_post_request import UsersNameActivityPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1768,11 +1768,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
-    body = openapi_client.UsersNameActivityPostRequest() # UsersNameActivityPostRequest |  (optional)
+    body = jh_client.UsersNameActivityPostRequest() # UsersNameActivityPostRequest |  (optional)
 
     try:
         # Notify Hub of activity for a given user.
@@ -1825,13 +1825,13 @@ Delete a user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1843,9 +1843,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
 
     try:
@@ -1897,14 +1897,14 @@ Get a user by name
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1916,9 +1916,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
 
     try:
@@ -1974,15 +1974,15 @@ Change a user's name or admin status
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.models.users_name_patch_request import UsersNamePatchRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.models.users_name_patch_request import UsersNamePatchRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -1994,11 +1994,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
-    body = openapi_client.UsersNamePatchRequest() # UsersNamePatchRequest | Updated user info. At least one key to be updated (name or admin) is required.
+    body = jh_client.UsersNamePatchRequest() # UsersNamePatchRequest | Updated user info. At least one key to be updated (name or admin) is required.
 
     try:
         # Modify a user
@@ -2052,14 +2052,14 @@ Create a single user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2071,9 +2071,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
 
     try:
@@ -2127,13 +2127,13 @@ Stop a user's server
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2145,9 +2145,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
 
     try:
@@ -2200,13 +2200,13 @@ Start a user's single-user notebook server
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2218,9 +2218,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
     options = None # object | Spawn options can be passed as a JSON body when spawning via the API instead of spawn form. The structure of the options will depend on the Spawner's configuration. The body itself will be available as `user_options` for the Spawner.  (optional)
 
@@ -2277,13 +2277,13 @@ To remove the named server in addition to deleting it, the body may be a JSON di
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2295,9 +2295,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
     server_name = 'server_name_example' # str | name given to a named-server
 
@@ -2352,13 +2352,13 @@ Start a user's single-user named-server notebook server
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2370,9 +2370,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
     server_name = 'server_name_example' # str | name given to a named-server.  Note that depending on your JupyterHub infrastructure there are chracterter size limitation to `server_name`. Default spawner with K8s pod will not allow Jupyter Notebooks to be spawned with a name that contains more than 253 characters (keep in mind that the pod will be spawned with extra characters to identify the user and hub). 
     options = None # object | Spawn options can be passed as a JSON body when spawning via the API instead of spawn form. The structure of the options will depend on the Spawner's configuration.  (optional)
@@ -2429,14 +2429,14 @@ List tokens for the user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.token import Token
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.token import Token
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2448,9 +2448,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
 
     try:
@@ -2506,15 +2506,15 @@ Create a new token for the user
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.token import Token
-from openapi_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.token import Token
+from jh_client.models.users_name_tokens_post_request import UsersNameTokensPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2526,11 +2526,11 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
-    token_params = openapi_client.UsersNameTokensPostRequest() # UsersNameTokensPostRequest |  (optional)
+    token_params = jh_client.UsersNameTokensPostRequest() # UsersNameTokensPostRequest |  (optional)
 
     try:
         # Create a new token for the user
@@ -2586,13 +2586,13 @@ Delete (revoke) a token by id
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2604,9 +2604,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
     token_id = 'token_id_example' # str | 
 
@@ -2660,14 +2660,14 @@ Get the model for a token by id
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.token import Token
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.token import Token
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2679,9 +2679,9 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
     token_id = 'token_id_example' # str | 
 
@@ -2737,15 +2737,15 @@ Create multiple users
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.user import User
-from openapi_client.models.users_post_request import UsersPostRequest
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.models.user import User
+from jh_client.models.users_post_request import UsersPostRequest
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -2757,10 +2757,10 @@ configuration = openapi_client.Configuration(
 configuration.access_token = os.environ["ACCESS_TOKEN"]
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
-    body = openapi_client.UsersPostRequest() # UsersPostRequest | 
+    api_instance = jh_client.DefaultApi(api_client)
+    body = jh_client.UsersPostRequest() # UsersPostRequest | 
 
     try:
         # Create multiple users

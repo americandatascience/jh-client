@@ -21,7 +21,7 @@ from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel
 from pydantic import Field
-from openapi_client.models.users_name_activity_post_request_servers import UsersNameActivityPostRequestServers
+from jh_client.models.users_name_activity_post_request_servers import UsersNameActivityPostRequestServers
 try:
     from typing import Self
 except ImportError:

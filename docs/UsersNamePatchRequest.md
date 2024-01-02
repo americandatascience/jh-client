@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.users_name_patch_request import UsersNamePatchRequest
+from jh_client.models.users_name_patch_request import UsersNamePatchRequest
 
 # TODO update the JSON string below
 json = "{}"

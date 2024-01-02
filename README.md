@@ -1,5 +1,6 @@
 # Jupyter Hub Python Client
-An SDK and API-wrapper for the jupyter hub REST API. 
+
+An SDK and API-wrapper for the jupyter hub REST API.
 
 - API version: 4.0.2
 - Package version: 1.0.0
@@ -21,7 +22,7 @@ pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 
 Then import the package:
 ```python
-import openapi_client
+import jh_client
 ```
 
 ### Setuptools
@@ -35,7 +36,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import openapi_client
+import jh_client
 ```
 
 ### Tests
@@ -49,13 +50,13 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import jh_client
+from jh_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to /hub/api
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = jh_client.Configuration(
     host = "/hub/api"
 )
 
@@ -74,9 +75,9 @@ configuration.api_key['token'] = os.environ["API_KEY"]
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = jh_client.DefaultApi(api_client)
     cookie_name = 'cookie_name_example' # str | 
     cookie_value = 'cookie_value_example' # str | 
 
@@ -219,6 +220,9 @@ Authentication schemes defined for the API:
  - **proxy**: Read information about the proxy’s routing table, sync the Hub with the proxy and notify the Hub about a new proxy.
  - **shutdown**: Shutdown the hub.
  - **read:metrics**: Read prometheus metrics.
+
+
+## Author
 
 
 

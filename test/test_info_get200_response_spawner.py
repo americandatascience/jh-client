@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.info_get200_response_spawner import InfoGet200ResponseSpawner
+from jh_client.models.info_get200_response_spawner import InfoGet200ResponseSpawner
 
 class TestInfoGet200ResponseSpawner(unittest.TestCase):
     """InfoGet200ResponseSpawner unit test stubs"""

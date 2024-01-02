@@ -21,8 +21,8 @@ import json
 from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel, StrictStr
 from pydantic import Field
-from openapi_client.models.info_get200_response_authenticator import InfoGet200ResponseAuthenticator
-from openapi_client.models.info_get200_response_spawner import InfoGet200ResponseSpawner
+from jh_client.models.info_get200_response_authenticator import InfoGet200ResponseAuthenticator
+from jh_client.models.info_get200_response_spawner import InfoGet200ResponseSpawner
 try:
     from typing import Self
 except ImportError:

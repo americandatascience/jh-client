@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.shutdown_post_request import ShutdownPostRequest
+from jh_client.models.shutdown_post_request import ShutdownPostRequest
 
 # TODO update the JSON string below
 json = "{}"

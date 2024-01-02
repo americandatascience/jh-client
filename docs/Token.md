@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.token import Token
+from jh_client.models.token import Token
 
 # TODO update the JSON string below
 json = "{}"

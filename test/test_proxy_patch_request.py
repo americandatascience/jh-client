@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.proxy_patch_request import ProxyPatchRequest
+from jh_client.models.proxy_patch_request import ProxyPatchRequest
 
 class TestProxyPatchRequest(unittest.TestCase):
     """ProxyPatchRequest unit test stubs"""

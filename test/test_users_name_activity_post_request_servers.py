@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.users_name_activity_post_request_servers import UsersNameActivityPostRequestServers
+from jh_client.models.users_name_activity_post_request_servers import UsersNameActivityPostRequestServers
 
 class TestUsersNameActivityPostRequestServers(unittest.TestCase):
     """UsersNameActivityPostRequestServers unit test stubs"""
@@ -36,7 +36,7 @@ class TestUsersNameActivityPostRequestServers(unittest.TestCase):
         model = UsersNameActivityPostRequestServers()
         if include_optional:
             return UsersNameActivityPostRequestServers(
-                server_name = openapi_client.models._users__name__activity_post_request_servers__server_name_._users__name__activity_post_request_servers__server_name_(
+                server_name = jh_client.models._users__name__activity_post_request_servers__server_name_._users__name__activity_post_request_servers__server_name_(
                     last_activity = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
             )
         else:

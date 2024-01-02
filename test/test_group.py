@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.group import Group
+from jh_client.models.group import Group
 
 class TestGroup(unittest.TestCase):
     """Group unit test stubs"""

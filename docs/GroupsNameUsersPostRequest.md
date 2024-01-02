@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
+from jh_client.models.groups_name_users_post_request import GroupsNameUsersPostRequest
 
 # TODO update the JSON string below
 json = "{}"

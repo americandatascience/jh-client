@@ -10,7 +10,8 @@ docker run --rm \
     -v ${PWD}:/local openapitools/openapi-generator-cli generate \
     -i /local/api.yaml \
     -g python \
-    -o /local
+    -o /local \
+    --additional-properties=packageName=jh_client
 ```
 
 # Origin OpenAPI Configurations YAML

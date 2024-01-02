@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
+from jh_client.models.oauth2_token_post200_response import Oauth2TokenPost200Response
 
 # TODO update the JSON string below
 json = "{}"

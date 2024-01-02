@@ -21,7 +21,7 @@ from datetime import datetime
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from pydantic import BaseModel, StrictBool, StrictFloat, StrictInt, StrictStr, field_validator
 from pydantic import Field
-from openapi_client.models.server import Server
+from jh_client.models.server import Server
 try:
     from typing import Self
 except ImportError:

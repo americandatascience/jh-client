@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.shutdown_post_request import ShutdownPostRequest
+from jh_client.models.shutdown_post_request import ShutdownPostRequest
 
 class TestShutdownPostRequest(unittest.TestCase):
     """ShutdownPostRequest unit test stubs"""

@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.token import Token
+from jh_client.models.token import Token
 
 class TestToken(unittest.TestCase):
     """Token unit test stubs"""

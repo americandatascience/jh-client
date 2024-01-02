@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.proxy_patch_request import ProxyPatchRequest
+from jh_client.models.proxy_patch_request import ProxyPatchRequest
 
 # TODO update the JSON string below
 json = "{}"

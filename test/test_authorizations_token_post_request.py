@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
+from jh_client.models.authorizations_token_post_request import AuthorizationsTokenPostRequest
 
 class TestAuthorizationsTokenPostRequest(unittest.TestCase):
     """AuthorizationsTokenPostRequest unit test stubs"""

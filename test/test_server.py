@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.server import Server
+from jh_client.models.server import Server
 
 class TestServer(unittest.TestCase):
     """Server unit test stubs"""
@@ -44,8 +44,8 @@ class TestServer(unittest.TestCase):
                 progress_url = '',
                 started = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 last_activity = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
-                state = openapi_client.models.state.state(),
-                user_options = openapi_client.models.user_options.user_options()
+                state = jh_client.models.state.state(),
+                user_options = jh_client.models.user_options.user_options()
             )
         else:
             return Server(

@@ -21,7 +21,7 @@ import json
 from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel
 from pydantic import Field
-from openapi_client.models.users_name_activity_post_request_servers_server_name import UsersNameActivityPostRequestServersServerName
+from jh_client.models.users_name_activity_post_request_servers_server_name import UsersNameActivityPostRequestServersServerName
 try:
     from typing import Self
 except ImportError:

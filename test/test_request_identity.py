@@ -15,7 +15,7 @@
 import unittest
 import datetime
 
-from openapi_client.models.request_identity import RequestIdentity
+from jh_client.models.request_identity import RequestIdentity
 
 class TestRequestIdentity(unittest.TestCase):
     """RequestIdentity unit test stubs"""
@@ -48,7 +48,7 @@ class TestRequestIdentity(unittest.TestCase):
                 pending = 'spawn',
                 last_activity = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'),
                 servers = {
-                    'key' : openapi_client.models.server.Server(
+                    'key' : jh_client.models.server.Server(
                         name = '', 
                         ready = True, 
                         stopped = True, 
@@ -57,17 +57,17 @@ class TestRequestIdentity(unittest.TestCase):
                         progress_url = '', 
                         started = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         last_activity = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                        state = openapi_client.models.state.state(), 
-                        user_options = openapi_client.models.user_options.user_options(), )
+                        state = jh_client.models.state.state(), 
+                        user_options = jh_client.models.user_options.user_options(), )
                     },
-                auth_state = openapi_client.models.auth_state.auth_state(),
+                auth_state = jh_client.models.auth_state.auth_state(),
                 url = '',
                 prefix = '',
                 pid = 1.337,
                 command = [
                     ''
                     ],
-                info = openapi_client.models.info.info(),
+                info = jh_client.models.info.info(),
                 session_id = '',
                 scopes = ["read:users","access:servers!user=name"]
             )
