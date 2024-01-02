@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "jh_client"
+name = "jh-client"
 version = "1.2.0"
 description = "JupyterHub"
 authors = ["Andrew Chang"]
