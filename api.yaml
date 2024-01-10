@@ -209,6 +209,16 @@ paths:
           required: true
           schema:
             type: string
+        - name: include_stopped_servers
+          in: query
+          description: |
+            Include stopped servers in user model(s).
+            Added in JupyterHub 3.0.
+            Allows retrieval of information about stopped servers,
+            such as activity and state fields.
+          schema:
+            type: boolean
+          allowEmptyValue: true
       responses:
         200:
           description: The User model

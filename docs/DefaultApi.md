@@ -1886,7 +1886,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **users_name_get**
-> User users_name_get(name)
+> User users_name_get(name, include_stopped_servers=include_stopped_servers)
 
 Get a user by name
 
@@ -1920,10 +1920,11 @@ with jh_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = jh_client.DefaultApi(api_client)
     name = 'name_example' # str | username
+    include_stopped_servers = True # bool | Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields.  (optional)
 
     try:
         # Get a user by name
-        api_response = api_instance.users_name_get(name)
+        api_response = api_instance.users_name_get(name, include_stopped_servers=include_stopped_servers)
         print("The response of DefaultApi->users_name_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -1938,6 +1939,7 @@ with jh_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**| username | 
+ **include_stopped_servers** | **bool**| Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields.  | [optional] 
 
 ### Return type
 

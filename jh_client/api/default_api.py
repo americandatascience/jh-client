@@ -6470,6 +6470,7 @@ class DefaultApi:
     def users_name_get(
         self,
         name: Annotated[StrictStr, Field(description="username")],
+        include_stopped_servers: Annotated[Optional[StrictBool], Field(description="Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. ")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6488,6 +6489,8 @@ class DefaultApi:
 
         :param name: username (required)
         :type name: str
+        :param include_stopped_servers: Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. 
+        :type include_stopped_servers: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6512,6 +6515,7 @@ class DefaultApi:
 
         _param = self._users_name_get_serialize(
             name=name,
+            include_stopped_servers=include_stopped_servers,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6536,6 +6540,7 @@ class DefaultApi:
     def users_name_get_with_http_info(
         self,
         name: Annotated[StrictStr, Field(description="username")],
+        include_stopped_servers: Annotated[Optional[StrictBool], Field(description="Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. ")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6554,6 +6559,8 @@ class DefaultApi:
 
         :param name: username (required)
         :type name: str
+        :param include_stopped_servers: Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. 
+        :type include_stopped_servers: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6578,6 +6585,7 @@ class DefaultApi:
 
         _param = self._users_name_get_serialize(
             name=name,
+            include_stopped_servers=include_stopped_servers,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6602,6 +6610,7 @@ class DefaultApi:
     def users_name_get_without_preload_content(
         self,
         name: Annotated[StrictStr, Field(description="username")],
+        include_stopped_servers: Annotated[Optional[StrictBool], Field(description="Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. ")] = None,
         _request_timeout: Union[
             None,
             Annotated[StrictFloat, Field(gt=0)],
@@ -6620,6 +6629,8 @@ class DefaultApi:
 
         :param name: username (required)
         :type name: str
+        :param include_stopped_servers: Include stopped servers in user model(s). Added in JupyterHub 3.0. Allows retrieval of information about stopped servers, such as activity and state fields. 
+        :type include_stopped_servers: bool
         :param _request_timeout: timeout setting for this request. If one
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
@@ -6644,6 +6655,7 @@ class DefaultApi:
 
         _param = self._users_name_get_serialize(
             name=name,
+            include_stopped_servers=include_stopped_servers,
             _request_auth=_request_auth,
             _content_type=_content_type,
             _headers=_headers,
@@ -6663,6 +6675,7 @@ class DefaultApi:
     def _users_name_get_serialize(
         self,
         name,
+        include_stopped_servers,
         _request_auth,
         _content_type,
         _headers,
@@ -6685,6 +6698,10 @@ class DefaultApi:
         if name is not None:
             _path_params['name'] = name
         # process the query parameters
+        if include_stopped_servers is not None:
+            
+            _query_params.append(('include_stopped_servers', include_stopped_servers))
+            
         # process the header parameters
         # process the form parameters
         # process the body parameter
